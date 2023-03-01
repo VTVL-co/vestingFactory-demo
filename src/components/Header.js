@@ -26,12 +26,7 @@ const Header = () => {
 			</div>
 
 			<div className="menu-container">
-				<Link
-					to="/"
-					className="menu"
-				>
-					Create Vault
-				</Link>
+				{account && account.slice(0, 5) + '...' + account.slice(-3)}
 
 				<button
 					className="btn_connect"

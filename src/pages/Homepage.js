@@ -34,6 +34,7 @@ const Homepage = () => {
 	}, []);
 
 	const createVestingContract = async () => {
+		if (isLoading) return;
 		if (!fundAddress) {
 			alert('Please input Fund token address');
 			return;
@@ -153,10 +154,12 @@ const Homepage = () => {
 					<input
 						placeholder="Fund token address"
 						className="wallet_input"
+						disabled={isLoading}
+						value={fundAddress}
 						onChange={(e) => setFundAddress(e.target.value)}
 					/>
 					<button onClick={(e) => createVestingContract()}>
-						Create Vesting
+						Create vesting contract
 					</button>
 				</div>
 			)}
