@@ -1,0 +1,46 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+
+	background: #81a7ed;
+	padding: 20px 70px;
+}
+
+.menu-container {
+	display: flex;
+	justify-content: space-around;
+	width: 400px;
+	align-items: center;
+}
+.menu {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 37px;
+	/* identical to box height */
+	color: #2b67ac;
+}
+
+.logo {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18.4215px;
+	line-height: 21px;
+	/* identical to box height */
+	color: #000000;
+	letter-spacing: 0.06em;
+}
+
+.btn_connect {
+	background-color: rgb(71, 71, 231);
+	padding: 10px 20px;
+	color: wheat;
+	cursor: pointer;
+	border: none;
+}
+
+@media only screen and (max-width: 780px) {
+	.menu-container {
+		justify-content: flex-end;
+	}
+}
