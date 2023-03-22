@@ -22,7 +22,9 @@ function getParamFromEvent(transaction, eventName, paramIndex) {
 
 const Homepage = () => {
 	const { library } = useWeb3React();
-	const [fundAddress, setFundAddress] = useState('');
+	const [fundAddress, setFundAddress] = useState(
+		'0xFe1c5FE9B0e1441D8857d0576eA48CA077AbD098'
+	);
 	const [vestingAddress, setVestingAddress] = useState('');
 	const [schedule, setSchedule] = useState({});
 	const [isLoading, setIsLoading] = useState(false);
@@ -135,7 +137,8 @@ const Homepage = () => {
 				3600 * 24 * 30,
 				releaseInterval,
 				parseEther(schedule.linearAmount),
-				parseEther(schedule.cliffAmount)
+				parseEther(schedule.cliffAmount),
+				schedule.fractionalAmount
 			);
 			await trx.wait();
 			alert('You created the schedule successfully');
@@ -226,6 +229,16 @@ const Homepage = () => {
 								type="number"
 								name="cliffAmount"
 								value={schedule.cliffAmount}
+								onChange={(e) => onInputChange(e)}
+							></input>
+						</div>
+
+						<div className="flex">
+							<span>Fractional amount: </span>
+							<input
+								type="number"
+								name="fractionalAmount"
+								value={schedule.fractionalAmount}
 								onChange={(e) => onInputChange(e)}
 							></input>
 						</div>
