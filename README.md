@@ -1,6 +1,6 @@
 # vestingFactory-demo
 Demo project for vesting factory contract
 
-## https://factory-demo.netlify.app
+## https://vtvl-v3-demo.netlify.app/
 
 
