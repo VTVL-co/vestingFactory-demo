@@ -30,15 +30,21 @@ input {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+	width: 500px;
 }
 label {
 	margin-right: 10px;
 }
 button {
-	padding: 10px 0;
+	padding: 10px 20px;
 	cursor: pointer;
 }
 
+.buttons {
+	display: flex;
+	margin-top: 20px;
+	justify-content: space-around;
+}
 @keyframes spinner {
 	0% {
 		transform: rotate(0deg);
