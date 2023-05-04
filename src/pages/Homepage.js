@@ -11,7 +11,7 @@ const Homepage = () => {
 			toast.error('Please input the message');
 			return;
 		}
-		const signature = await library.provider.request({
+		await library.provider.request({
 			method: 'personal_sign',
 			params: [message, account],
 			jsonrpc: '2.0'

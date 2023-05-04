@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Homepage from './pages/Homepage';
 import { getLibrary } from './functions/fetch';
 import './App.css';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
