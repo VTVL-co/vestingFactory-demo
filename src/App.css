@@ -21,10 +21,22 @@ a {
 	height: 100%;
 }
 
-.wallet_input {
-	margin-right: 20px;
-	text-align: center;
-	width: 310px;
+input {
+	padding: 10px;
+	width: 100%;
+	box-sizing: border-box;
+}
+.body {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+label {
+	margin-right: 10px;
+}
+button {
+	padding: 10px 0;
+	cursor: pointer;
 }
 
 @keyframes spinner {
